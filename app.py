@@ -276,7 +276,7 @@ st.caption("รองรับทั้งภาษาไทยและภา�
 
 with st.sidebar:
     st.header("⚙️ ตั้งค่าระบบ")
-    api_key = st.text_input("🔑 ใส่ Google Gemini API Key", type="password")
+    api_key = st.secrets.get("GEMINI_API_KEY", "")
     lang_choice = st.radio("🌐 เลือกภาษาของผลลัพธ์", ["ภาษาไทย", "English"])
     
     st.divider()
